@@ -1,0 +1,11 @@
+RewriteEngine On
+
+
+# Admin
+
+RewriteRule ^(.+)/(.+)/([0-9]+)/.+$ 			index.php?controller=$1&action=$2&id=$3 [L,QSA]
+RewriteRule ^(.+)/(.+)/([0-9]+)$ 				index.php?controller=$1&action=$2&id=$3 [L,QSA]
+
+RewriteRule ^(.+)/(.+)$ 						index.php?controller=$1&action=$2 
+
+RewriteRule ^(.+).html$						login.php?action=$1
